@@ -1,7 +1,7 @@
 <div align="center">
 <h1>Neovim configuration</h1>
 My personal Neovim config configuartion.
-<div/>
+</div>
 
 <div align="center">
     <img width="49%" src="assets/which-key.png"/>
