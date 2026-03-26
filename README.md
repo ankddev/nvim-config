@@ -68,4 +68,5 @@ git clone https://github.com/ankddev/nvim-config.git .
 
 ## License
 
-Licensed under Apache License 2.0, see [LICENSE](./LICENSE)
+Licensed under CC0, see [LICENSE](./LICENSE). This means that you can do
+whatever you want with it, though with no guarantees.
