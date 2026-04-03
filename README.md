@@ -4,12 +4,12 @@ My personal Neovim config configuartion.
 </div>
 
 <div align="center">
-  <img width="33%" src="assets/which-key.png"/>
-  <img width="33%" src="assets/telescope.png"/>
-  <img width="33%" src="assets/lazy.png"/>
-  <img width="33%" src="assets/flash.png"/>
-  <img width="33%" src="assets/completion.png"/>
-  <img width="33%" src="assets/code.png"/>
+  <img width="49%" src="assets/which-key.png"/>
+  <img width="49%" src="assets/telescope.png"/>
+  <img width="49%" src="assets/lazy.png"/>
+  <img width="49%" src="assets/flash.png"/>
+  <img width="49%" src="assets/completion.png"/>
+  <img width="49%" src="assets/code.png"/>
 </div>
 
 _^ Rust code with Maple Mono font ^_
