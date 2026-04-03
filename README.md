@@ -4,8 +4,8 @@ My personal Neovim config configuartion.
 </div>
 
 <div align="center">
-    <img width="49%" src="assets/which-key.png"/>
-    <img width="49%" src="assets/telescope.png"/>
+  <img width="49%" src="assets/which-key.png"/>
+  <img width="49%" src="assets/telescope.png"/>
 </div>
 
 _^ Rust code with Maple Mono font ^_
@@ -18,11 +18,12 @@ _^ Rust code with Maple Mono font ^_
 - Abbreviations for some common misspellings in command names (like `:W` or `:Qa!`)
 - TS and LSP support for Rust, Go, Lua, Gleam, C, Python and more
 - Formatting with [`conform.nvim`](https://github.com/stevearc/conform.nvim)
-- Seearching in files and buffers with [`Telescope`](https://github.com/nvim-telescope/telescope.nvim)
+- Searching in files and buffers with [`Telescope`](https://github.com/nvim-telescope/telescope.nvim)
 - Autocomplete with [`blink.cmp`](https://github.com/saghen/blink.cmp)
 - Snippets with [`luasnip`](https://github.com/L3MON4D3/LuaSnip) and [`friendly-snippets`](https://github.com/rafamadriz/friendly-snippets)
 - Easy to remember keymap with [`which-key`](https://github.com/folke/which-key.nvim)
 - IDE-like breadcrumbs with [`dropbar.nvim`](https://github.com/Bekaboo/dropbar.nvim)
+- Powerful navigation with [`flash.nvim`](https://github.com/folke/flash.nvim)
 
 ## Requirements
 
