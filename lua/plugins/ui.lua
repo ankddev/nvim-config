@@ -43,23 +43,84 @@ return {
       options = {
         icons_enabled = true,
         component_separators = "",
+        section_separators = { left = "", right = "" },
       },
       sections = {
         lualine_a = {
-          "mode",
-        },
-        lualine_b = {
-          "branch",
-          "diff",
-          "lsp_status",
           {
-            "diagnostics",
+            "mode",
+            fmt = function(str)
+              local alias = {
+                n = "NO", -- Normal
+                i = "IN", -- Insert
+                v = "VI", -- Visual
+                V = "VL", -- Visual Line
+                ["\22"] = "VB", -- Visual Block
+                c = "CO", -- Command
+                s = "SE", -- Select
+                S = "SL", -- Select Line
+                ["\19"] = "SB", -- Select Block
+                R = "RE", -- Replace
+                Rv = "VR", -- Visual Replace
+                t = "TE", -- Terminal
+                nt = "TN", -- Terminal Normal
+                no = "OP", -- Operator-pending
+                r = "PR", -- Prompt
+                rm = "MO", -- More
+                ["r?"] = "CF", -- Confirm
+                cv = "EX", -- Vim Ex
+                ce = "EX", -- Normal Ex
+              }
+
+              local mode_code = vim.api.nvim_get_mode().mode
+              return alias[mode_code] or str:upper()
+            end,
+            icons_enabled = true,
+            icon = "",
+            padding = 0,
+            separator = { left = "", right = "" },
           },
         },
-        lualine_c = { "filename" },
-        lualine_x = { "encoding", "fileformat", "filetype" },
-        lualine_y = { "searchcount", "selectioncount", "progress" },
-        lualine_z = { "location" },
+        lualine_b = {
+          {
+            "branch",
+            icon = "",
+          },
+          {
+            "diff",
+            symbols = {
+              added = " ",
+              modified = " ",
+              removed = " ",
+            },
+          },
+          "lsp_status",
+          "diagnostics",
+        },
+        lualine_c = {
+          {
+            "filetype",
+            icon_only = true,
+            padding = { left = 1, right = 0 },
+          },
+          "filename",
+        },
+        lualine_x = {
+          { "encoding", show_bomb = true },
+          "fileformat",
+        },
+        lualine_y = {
+          "searchcount",
+          "selectioncount",
+          "progress",
+        },
+        lualine_z = {
+          {
+            "location",
+            padding = 0,
+            separator = { left = "", right = "" },
+          },
+        },
       },
       inactive_sections = {
         lualine_a = {},
@@ -69,7 +130,7 @@ return {
         lualine_y = {},
         lualine_z = {},
       },
-      extensions = { 'quickfix', 'trouble', 'lazy', 'fzf' }
+      extensions = { "quickfix", "trouble", "lazy", "fzf" },
     },
   },
   {
@@ -99,7 +160,7 @@ return {
     "NMAC427/guess-indent.nvim",
     lazy = true,
   },
-  { 'nvim-mini/mini.diff', version = '*', opts = {} },
+  { "nvim-mini/mini.diff", version = "*", opts = {} },
   {
     "echasnovski/mini.icons",
     version = "*",
