@@ -51,25 +51,25 @@ return {
             "mode",
             fmt = function(str)
               local alias = {
-                n = "NO", -- Normal
-                i = "IN", -- Insert
-                v = "VI", -- Visual
-                V = "VL", -- Visual Line
-                ["\22"] = "VB", -- Visual Block
-                c = "CO", -- Command
-                s = "SE", -- Select
-                S = "SL", -- Select Line
-                ["\19"] = "SB", -- Select Block
-                R = "RE", -- Replace
-                Rv = "VR", -- Visual Replace
-                t = "TE", -- Terminal
-                nt = "TN", -- Terminal Normal
-                no = "OP", -- Operator-pending
-                r = "PR", -- Prompt
-                rm = "MO", -- More
-                ["r?"] = "CF", -- Confirm
-                cv = "EX", -- Vim Ex
-                ce = "EX", -- Normal Ex
+                n = "N",       -- Normal (NO)
+                i = "I",       -- Insert (IN)
+                v = "V",       -- Visual (VI)
+                V = "L",       -- Visual Line (VL)
+                ["\22"] = "B", -- Visual Block (VB)
+                c = "C",       -- Command (CO)
+                s = "S",       -- Select (SE)
+                S = "L",       -- Select Line (SL)
+                ["\19"] = "B", -- Select Block (SB)
+                R = "R",       -- Replace (RE)
+                Rv = "V",      -- Visual Replace (RV)
+                t = "T",       -- Terminal (TE)
+                nt = "T",      -- Terminal Normal (TN)
+                no = "O",      -- Operator-pending (OP)
+                r = "P",       -- Prompt (PR)
+                rm = "M",      -- More (MO)
+                ["r?"] = "F",  -- Confirm (CF)
+                cv = "E",      -- Vim Ex (EX)
+                ce = "E",      -- Normal Ex (EX)
               }
 
               local mode_code = vim.api.nvim_get_mode().mode
@@ -85,7 +85,7 @@ return {
           {
             "branch",
             icon = "",
-            padding = { left = 1, right = 1 },
+            padding = { left = 1, right = 0 },
           },
           {
             "diff",
@@ -94,15 +94,15 @@ return {
               modified = " ",
               removed = " ",
             },
-            padding = { left = 0, right = 1 },
+            padding = { left = 1, right = 0 },
           },
           {
             "lsp_status",
-            padding = { left = 0, right = 1 },
+            padding = { left = 1, right = 0 },
           },
           {
             "diagnostics",
-            padding = { left = 0, right = 0 },
+            padding = { left = 1, right = 0 },
           },
         },
         lualine_c = {
@@ -130,10 +130,12 @@ return {
         lualine_y = {
           {
             "searchcount",
+            icon = "",
             padding = { left = 0, right = 1 },
           },
           {
             "selectioncount",
+            icon = "󰒉",
             padding = { left = 0, right = 1 },
           },
           {
