@@ -14,6 +14,8 @@ My personal Neovim config configuartion.
 
 _^ Rust code with Maple Mono font ^_
 
+See all of my dotfiles in [dedicated repo](https://github.com/ankddev/dotfiles)!
+
 ## Highlights
 
 - Plugin management with [`Lazy.nvim`](https://github.com/folke/lazy.nvim), configured to be very lazy
