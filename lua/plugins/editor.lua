@@ -138,7 +138,22 @@ return {
   },
   {
     "folke/flash.nvim",
-    opts = {},
+    lazy = false,
+    opts = {
+      label = {
+        rainbow = {
+          enabled = true,
+        },
+      },
+      modes = {
+         search = {
+           enabled = true,
+         },
+      },
+      prompt = {
+        prefix = { { "  ", "FlashPromptIcon" } },
+      }
+    },
     keys = {
       {
         "s",
