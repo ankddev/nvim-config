@@ -85,6 +85,7 @@ return {
           {
             "branch",
             icon = "",
+            padding = { left = 1, right = 1 },
           },
           {
             "diff",
@@ -93,9 +94,16 @@ return {
               modified = " ",
               removed = " ",
             },
+            padding = { left = 0, right = 1 },
           },
-          "lsp_status",
-          "diagnostics",
+          {
+            "lsp_status",
+            padding = { left = 0, right = 1 },
+          },
+          {
+            "diagnostics",
+            padding = { left = 0, right = 0 },
+          },
         },
         lualine_c = {
           {
@@ -103,16 +111,35 @@ return {
             icon_only = true,
             padding = { left = 1, right = 0 },
           },
-          "filename",
+          {
+            "filename",
+            padding = { left = 1, right = 0 },
+          },
         },
         lualine_x = {
-          { "encoding", show_bomb = true },
-          "fileformat",
+          {
+            "encoding",
+            show_bomb = true,
+            padding = { left = 0, right = 1 },
+          },
+          {
+            "fileformat",
+            padding = { left = 0, right = 1 },
+          },
         },
         lualine_y = {
-          "searchcount",
-          "selectioncount",
-          "progress",
+          {
+            "searchcount",
+            padding = { left = 0, right = 1 },
+          },
+          {
+            "selectioncount",
+            padding = { left = 0, right = 1 },
+          },
+          {
+            "progress",
+            padding = { left = 0, right = 1 },
+          },
         },
         lualine_z = {
           {
